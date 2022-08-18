@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import img from '../images/SP1.jpg';
 import { Link } from 'react-router-dom'
 import {
     MDBNavbar,
@@ -10,7 +11,8 @@ import {
     MDBNavbarToggler,
     MDBNavbarBrand,
     MDBCollapse,
-    MDBBtn
+    MDBBtn,
+    MDBInputGroup
 } from 'mdb-react-ui-kit';
 
 
@@ -20,16 +22,20 @@ export default function Header() {
 
 
 
-   return (
+    return (
         <>
             <header>
-                <MDBNavbar expand='lg' dark bgColor='primary' fixed='top'>
+               
+                <MDBNavbar  expand='lg' dark bgColor='dark' >
                     <MDBContainer fluid>
                         <Link to="/">
                             <MDBNavbarBrand>
-                              <img src='https://www.shutterstock.com/assets/images/shutterstock-logo-pos.svg' width={250}/>
+                                <img src={img} width={250} height={80} />
                             </MDBNavbarBrand>
                         </Link>
+
+                      
+
                         <MDBNavbarToggler
                             type='button'
                             data-target='#navbarColor02'
@@ -58,6 +64,11 @@ export default function Header() {
                                 </MDBNavbarItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
+                        <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
+                            <input className='form-control' placeholder="Type query" aria-label="Search" type='Search' />
+                            <MDBBtn outline>Search</MDBBtn>
+                        </MDBInputGroup>
+
                     </MDBContainer>
                 </MDBNavbar>
             </header>

@@ -7,6 +7,8 @@ import Home from './components/Home';
 
 function App() {
   return (
+    <>
+    
     <Router>
       <MDBContainer fluid>
       <Header />
@@ -16,6 +18,9 @@ function App() {
       </Routes>
       </MDBContainer>
     </Router>
+    
+  
+  </>
   );
 }
 
